@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Background</title>
+<style>
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  .bg_heart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url("https://i.postimg.cc/SKDpTJkh/Untitled-design.jpg");
+    background-size: cover;
+    z-index: -1;
+    animation: untoldcoding 55s 1 ease-in-out;
+  }
+  @keyframes untoldcoding {
+    0% {
+      background-image: url("https://i.postimg.cc/k4YjCZvp/IMG-2768.jpg");
+    }
+    25% {
+      background-image: url("https://i.postimg.cc/NMjNWYmX/2269-DF21-EA16-4469-8-D2-F-EB4-F9775794-E.jpg");
+    }
+    50% {
+      background-image: url("https://i.postimg.cc/G2fnRV4g/Untitled-design.jpg");
+    }
+    75% {
+      background-image: url("https://i.postimg.cc/Kcd4rs05/Untitled-design.png");
+    }
+    100% {
+      background-image: url("https://i.postimg.cc/SKDpTJkh/Untitled-design.jpg");
+    }
+  }
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: Helvetica, sans-serif;
+  }
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="bg_heart">
+    <div class="container">
+      <div class="image-container">
+        <button id="playButton">Play</button>
+        <img src="https://i.postimg.cc/k4YjCZvp/IMG-2768.jpg" alt="Heart Image">
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      var bgHeart = document.querySelector('.bg_heart');
+      bgHeart.style.animationPlayState = 'running';
+    });
+  </script>
+</body>
+</html>

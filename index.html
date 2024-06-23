@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udhay</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #myAudio {
+        display: none; /* Hide the default audio controls */
+      }
+
+      #touchMeButton {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg_heart"></div>
+
+    <div class="container">
+      <h2 id="text1"></h2>
+    </div>
+
+    <audio id="myAudio" controls="false" preload="auto" muted>
+      <source src="Kadhal-Ennulle-.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <button id="touchMeButton">Touch me😉</button>
+
+    <script src="Udhay.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('myAudio');
+        audio.muted = false; // Unmute the audio (optional)
+
+        var touchMeButton = document.getElementById('touchMeButton');
+
+        touchMeButton.addEventListener('click', function() {
+          audio.play();
+        });
+      });
+    </script>
+  </body>
+</html>
